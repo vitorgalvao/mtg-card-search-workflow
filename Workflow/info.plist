@@ -34,19 +34,6 @@
 		</array>
 		<key>2848A56F-1A95-4B70-916A-821B9E221D5C</key>
 		<array/>
-		<key>6788796D-C572-4591-B1C1-119307C1C25E</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>03564AD6-B6E9-4DA5-B5FD-BE6897EC368B</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>820CAA0D-91F1-435C-B062-EEB64D6A5762</key>
 		<array>
 			<dict>
@@ -58,6 +45,16 @@
 				<string></string>
 				<key>vitoclose</key>
 				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>03564AD6-B6E9-4DA5-B5FD-BE6897EC368B</string>
+				<key>modifiers</key>
+				<integer>8388608</integer>
+				<key>modifiersubtext</key>
+				<string>Force Cache Update</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -130,6 +127,58 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>.*\|</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>FC9A7F1E-2AFF-4329-A471-096385302BDB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>function notification {
+  ./notificator --message "${1}" --title "${alfred_workflow_name}" --sound "${2}"
+}
+
+export mtg_cards_json="${alfred_workflow_cache}/all_mtg_cards.json"
+
+./build_mtg_cards_json &amp;&amp; \
+  notification 'Updated card database' 'Glass' || \
+  notification 'Error rebuilding card database' 'Funk'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>03564AD6-B6E9-4DA5-B5FD-BE6897EC368B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -182,27 +231,6 @@ cat "${mtg_cards_json}"</string>
 			<string>820CAA0D-91F1-435C-B062-EEB64D6A5762</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>.*\|</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>FC9A7F1E-2AFF-4329-A471-096385302BDB</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -265,60 +293,6 @@ cat "${mtg_cards_json}"</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>function notification {
-  ./notificator --message "${1}" --title "${alfred_workflow_name}" --sound "${2}"
-}
-
-export mtg_cards_json="${alfred_workflow_cache}/all_mtg_cards.json"
-
-if ./build_mtg_cards_json; then
-  notification 'Updated card database' 'Glass'
-else
-  notification 'Error rebuilding card database' 'Funk'
-fi</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>03564AD6-B6E9-4DA5-B5FD-BE6897EC368B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>:mtgrebuild</string>
-				<key>subtext</key>
-				<string>Should take a few seconds. Will notify when done.</string>
-				<key>text</key>
-				<string>(Re)build Magic: The Gathering Cards JSON</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>6788796D-C572-4591-B1C1-119307C1C25E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>## Usage
@@ -332,7 +306,7 @@ Search for Magic: The Gathering cards via the Search Keyword (default: `mtg`).
 * &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Paste the name and URL separated by a colon.
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;Y&lt;/kbd&gt; (or tap &lt;kbd&gt;⇧&lt;/kbd&gt;): Quick Look the front face.
 
-The card database is updated when older than two weeks. If necessary, an immediate cache rebuild can be forced with the `‌:mtgrebuild` keyword.</string>
+The card database is updated when older than two weeks. An immediate cache rebuild can be forced with &lt;kbd&gt;fn&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;.</string>
 	<key>uidata</key>
 	<dict>
 		<key>03564AD6-B6E9-4DA5-B5FD-BE6897EC368B</key>
@@ -340,56 +314,49 @@ The card database is updated when older than two weeks. If necessary, an immedia
 			<key>xpos</key>
 			<real>330</real>
 			<key>ypos</key>
-			<real>340</real>
+			<real>180</real>
 		</dict>
 		<key>0A0E99D1-B148-47E0-BD14-7F233173BF37</key>
 		<dict>
 			<key>xpos</key>
 			<real>250</real>
 			<key>ypos</key>
-			<real>180</real>
+			<real>360</real>
 		</dict>
 		<key>1AC1AD97-F4A1-4559-A916-9EE3455CBAE5</key>
 		<dict>
 			<key>xpos</key>
 			<real>250</real>
 			<key>ypos</key>
-			<real>270</real>
+			<real>450</real>
 		</dict>
 		<key>2848A56F-1A95-4B70-916A-821B9E221D5C</key>
 		<dict>
 			<key>xpos</key>
 			<real>330</real>
 			<key>ypos</key>
-			<real>20</real>
-		</dict>
-		<key>6788796D-C572-4591-B1C1-119307C1C25E</key>
-		<dict>
-			<key>xpos</key>
 			<real>30</real>
-			<key>ypos</key>
-			<real>340</real>
 		</dict>
 		<key>820CAA0D-91F1-435C-B062-EEB64D6A5762</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>20</real>
+			<real>180</real>
 		</dict>
 		<key>CA02F6D7-6258-4676-B230-C11E9D0E023E</key>
 		<dict>
 			<key>xpos</key>
 			<real>330</real>
 			<key>ypos</key>
-			<real>150</real>
+			<real>330</real>
 		</dict>
 		<key>FC9A7F1E-2AFF-4329-A471-096385302BDB</key>
 		<dict>
 			<key>xpos</key>
 			<real>250</real>
 			<key>ypos</key>
-			<real>50</real>
+			<real>60</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -441,7 +408,7 @@ The card database is updated when older than two weeks. If necessary, an immedia
 				</array>
 			</dict>
 			<key>description</key>
-			<string></string>
+			<string>Smaller image sizes load faster in Quick Look.</string>
 			<key>label</key>
 			<string>Image Size</string>
 			<key>type</key>
@@ -457,7 +424,7 @@ The card database is updated when older than two weeks. If necessary, an immedia
 				<key>required</key>
 				<false/>
 				<key>text</key>
-				<string></string>
+				<string>Highest rarity at the top</string>
 			</dict>
 			<key>description</key>
 			<string></string>
@@ -470,7 +437,7 @@ The card database is updated when older than two weeks. If necessary, an immedia
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2022.5</string>
+	<string>2023.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/vitorgalvao/mtg-card-search-workflow/</string>
 </dict>
