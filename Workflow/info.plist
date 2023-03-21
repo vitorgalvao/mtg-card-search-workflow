@@ -297,7 +297,7 @@ cat "${mtg_cards_json}"</string>
 	<key>readme</key>
 	<string>## Usage
 
-Search for Magic: The Gathering cards via the Search Keyword (default: `mtg`).
+Search for Magic: The Gathering cards via the `mtg` keyword.
 
 ![Searching for sliver cards](images/about/mtg.png)
 
