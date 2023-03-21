@@ -2,11 +2,11 @@
 
 Search for Magic: The Gathering playing cards
 
-<a href='https://alfred.app/workflows/vitor/mtg-card-search'>⤓ Install on the Alfred Gallery</a>
+[⤓ Install on the Alfred Gallery](https://alfred.app/workflows/vitor/mtg-card-search)
 
 ## Usage
 
-Search for Magic: The Gathering cards via the Search Keyword (default: `mtg`).
+Search for Magic: The Gathering cards via the `mtg` keyword.
 
 ![Searching for sliver cards](Workflow/images/about/mtg.png)
 
