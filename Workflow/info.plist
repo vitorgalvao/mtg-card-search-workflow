@@ -50,7 +50,7 @@
 				<key>destinationuid</key>
 				<string>03564AD6-B6E9-4DA5-B5FD-BE6897EC368B</string>
 				<key>modifiers</key>
-				<integer>8388608</integer>
+				<integer>1835008</integer>
 				<key>modifiersubtext</key>
 				<string>Force Cache Update</string>
 				<key>vitoclose</key>
@@ -306,7 +306,7 @@ Search for Magic: The Gathering cards via the `mtg` keyword.
 * &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Paste the name and URL separated by a colon.
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;Y&lt;/kbd&gt; (or tap &lt;kbd&gt;⇧&lt;/kbd&gt;): Quick Look the front face.
 
-The card database is updated when older than two weeks. An immediate cache rebuild can be forced with &lt;kbd&gt;fn&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;.</string>
+The card database is updated when older than two weeks. An immediate cache rebuild can be forced with &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;.</string>
 	<key>uidata</key>
 	<dict>
 		<key>03564AD6-B6E9-4DA5-B5FD-BE6897EC368B</key>
