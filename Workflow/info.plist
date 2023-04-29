@@ -437,7 +437,7 @@ The card database is updated when older than two weeks. An immediate cache rebui
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2023.2</string>
+	<string>2023.3</string>
 	<key>webaddress</key>
 	<string>https://github.com/vitorgalvao/mtg-card-search-workflow/</string>
 </dict>

@@ -15,4 +15,4 @@ Search for Magic: The Gathering cards via the `mtg` keyword.
 * <kbd>⌥</kbd><kbd>↩&#xFE0E;</kbd>: Paste the name and URL separated by a colon.
 * <kbd>⌘</kbd><kbd>Y</kbd> (or tap <kbd>⇧</kbd>): Quick Look the front face.
 
-The card database is updated when older than two weeks. An immediate cache rebuild can be forced with <kbd>fn</kbd><kbd>↩&#xFE0E;</kbd>.
+The card database is updated when older than two weeks. An immediate cache rebuild can be forced with <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>↩&#xFE0E;</kbd>.
