@@ -167,7 +167,7 @@ export mtg_cards_json="${alfred_workflow_cache}/all_mtg_cards.json"
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>11</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -221,7 +221,7 @@ cat "${mtg_cards_json}"</string>
 				<key>title</key>
 				<string>Magic: The Gathering Card Search</string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>11</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
