@@ -211,7 +211,7 @@ if [[ ! -f "${mtg_cards_json}" || -n "$(find "${mtg_cards_json}" -mtime 15)" ]];
   ./build_mtg_cards_json
 fi
 
-cat "${mtg_cards_json}"</string>
+&lt; "${mtg_cards_json}"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
