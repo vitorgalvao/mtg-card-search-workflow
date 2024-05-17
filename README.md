@@ -10,9 +10,19 @@ Search for Magic: The Gathering cards via the `mtg` keyword.
 
 ![Searching for sliver cards](Workflow/images/about/mtg.png)
 
-* <kbd>↩&#xFE0E;</kbd>: Open on [Scryfall](https://scryfall.com/).
-* <kbd>⌘</kbd><kbd>↩&#xFE0E;</kbd>: Paste the name and URL as a markdown link.
-* <kbd>⌥</kbd><kbd>↩&#xFE0E;</kbd>: Paste the name and URL separated by a colon.
-* <kbd>⌘</kbd><kbd>Y</kbd> (or tap <kbd>⇧</kbd>): Quick Look the front face.
+* <kbd>↩&#xFE0E;</kbd> View card in Alfred. Press again to return to list.
+* <kbd>⇧</kbd><kbd>↩&#xFE0E;</kbd> Open on [Scryfall](https://scryfall.com/).
+* <kbd>⌥</kbd><kbd>↩&#xFE0E;</kbd> Copy Scryfall URL. Subsequent triggers append to the list.
+* <kbd>⌃</kbd><kbd>↩&#xFE0E;</kbd> Copy card name. Subsequent triggers append to the list.
+* <kbd>⌘</kbd><kbd>↩&#xFE0E;</kbd> Add to history. Happens automatically when opening a card.
+* <kbd>⌘</kbd><kbd>Y</kbd> (or tap <kbd>⇧</kbd>) Quick Look the front face.
 
-The card database is updated when older than two weeks. An immediate cache rebuild can be forced with <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>↩&#xFE0E;</kbd>.
+![Viewing image](Workflow/images/about/imageview.png)
+
+Search opened card history with the `mtghis` keyword.
+
+![Keyword to view history](Workflow/images/about/mtghis.png)
+
+![Viewing history in grid](Workflow/images/about/gridview.png)
+
+The same shortcuts as above apply.
