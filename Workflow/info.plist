@@ -1223,7 +1223,7 @@ Search for Magic: The Gathering cards via the `mtg` keyword.
 * &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Copy Scryfall URL. Subsequent triggers append to the list.
 * &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Copy card name. Subsequent triggers append to the list.
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Add to history. Happens automatically when opening a card.
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;Y&lt;/kbd&gt; (or tap &lt;kbd&gt;⇧&lt;/kbd&gt;) Quick Look the front face.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;Y&lt;/kbd&gt; [Quick Look](https://www.alfredapp.com/help/features/previews/) the front face.
 
 ![Viewing image](images/about/imageview.png)
 
